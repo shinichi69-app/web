@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Builder Pro</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Toolbar -->
+        <header class="toolbar">
+            <div class="logo">🧩 Builder</div>
+            <div class="actions">
+                <button id="addSectionBtn"><i class="fas fa-plus"></i> เพิ่ม Section</button>
+                <button id="saveBtn"><i class="fas fa-save"></i> Save</button>
+                <button id="exportBtn"><i class="fas fa-file-code"></i> Export HTML</button>
+                <button id="loadBtn"><i class="fas fa-folder-open"></i> Load</button>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar: เลือก Element -->
+            <aside class="sidebar">
+                <h4>🎨 Elements</h4>
+                <div class="element-list">
+                    <div class="element-item" data-type="heading">หัวข้อ (H1)</div>
+                    <div class="element-item" data-type="paragraph">ย่อหน้า (P)</div>
+                    <div class="element-item" data-type="image">รูปภาพ (IMG)</div>
+                    <div class="element-item" data-type="button">ปุ่ม (Button)</div>
+                    <div class="element-item" data-type="container">กล่อง (Div)</div>
+                </div>
+                <hr>
+                <h4>⚙️ Properties</h4>
+                <div id="propertyPanel">
+                    <p>คลิกที่元素เพื่อแก้ไข</p>
+                </div>
+            </aside>
+
+            <!-- Canvas -->
+            <main class="canvas" id="canvas">
+                <!-- Sections จะถูกสร้างที่นี่ -->
+                <div class="empty-state">+ คลิก "เพิ่ม Section" เพื่อเริ่มต้น</div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
